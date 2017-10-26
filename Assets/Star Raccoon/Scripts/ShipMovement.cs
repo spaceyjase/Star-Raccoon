@@ -8,7 +8,11 @@ public class ShipMovement : MonoBehaviour
   [SerializeField]
   private float movementSpeed = 1.0f;
   [SerializeField]
+  private float slowRate = 0.98f;
+  [SerializeField]
   private float tilt = 1.0f;
+  [SerializeField]
+  private bool invertY = true;
   [SerializeField]
   private Boundary boundary;
 
@@ -24,7 +28,16 @@ public class ShipMovement : MonoBehaviour
     float h = Input.GetAxis("Horizontal");
     float v = Input.GetAxis("Vertical");
 
-    rb.velocity += new Vector3(h, -v, 0) * movementSpeed * Time.deltaTime;
+    if (h == 0f)
+    {
+      h = -rb.velocity.x * slowRate;
+    }
+    if (v == 0f)
+    {
+      v = invertY ? rb.velocity.y : -rb.velocity.y * slowRate;
+    }
+
+    rb.velocity += new Vector3(h, invertY ? -v : v, 0) * movementSpeed * Time.deltaTime;
 
     rb.position = new Vector3(
       Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
@@ -32,6 +45,6 @@ public class ShipMovement : MonoBehaviour
       0.0f
     );
 
-    rb.rotation = Quaternion.Euler(rb.velocity.y * tilt, rb.velocity.z * tilt * 10, rb.velocity.x * tilt);
+    rb.rotation = Quaternion.Euler(rb.velocity.y * tilt, 0.0f, rb.velocity.x * tilt);
   }
 }
