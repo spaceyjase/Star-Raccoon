@@ -203,15 +203,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4114999476364526, guid: 44b76fed29c74614f93e02d0346a14ac, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4114999476364526, guid: 44b76fed29c74614f93e02d0346a14ac, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4114999476364526, guid: 44b76fed29c74614f93e02d0346a14ac, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4114999476364526, guid: 44b76fed29c74614f93e02d0346a14ac, type: 2}
       propertyPath: m_LocalRotation.w
@@ -221,15 +221,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114400776710246296, guid: 44b76fed29c74614f93e02d0346a14ac,
-        type: 2}
-      propertyPath: movementSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114400776710246296, guid: 44b76fed29c74614f93e02d0346a14ac,
-        type: 2}
-      propertyPath: slowRate
-      value: 0.98
+    - target: {fileID: 4114999476364526, guid: 44b76fed29c74614f93e02d0346a14ac, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44b76fed29c74614f93e02d0346a14ac, type: 2}

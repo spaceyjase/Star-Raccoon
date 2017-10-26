@@ -14,6 +14,8 @@ public class ShipMovement : MonoBehaviour
   [SerializeField]
   private bool invertY = true;
   [SerializeField]
+  private float spin = 2.0f;
+  [SerializeField]
   private Boundary boundary;
 
   private Rigidbody rb;
@@ -36,7 +38,6 @@ public class ShipMovement : MonoBehaviour
     {
       v = invertY ? rb.velocity.y : -rb.velocity.y * slowRate;
     }
-
     rb.velocity += new Vector3(h, invertY ? -v : v, 0) * movementSpeed * Time.deltaTime;
 
     rb.position = new Vector3(
@@ -45,6 +46,6 @@ public class ShipMovement : MonoBehaviour
       0.0f
     );
 
-    rb.rotation = Quaternion.Euler(rb.velocity.y * tilt, 0.0f, rb.velocity.x * tilt);
+    rb.rotation = Quaternion.Euler(rb.velocity.y * tilt, -rb.velocity.x * tilt * spin, rb.velocity.x * tilt);
   }
 }
