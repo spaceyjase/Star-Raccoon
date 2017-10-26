@@ -10,6 +10,6 @@ public class MoveForward : MonoBehaviour
   // Update is called once per frame
   private void Update()
   {
-    transform.position -= transform.forward * speed * Time.deltaTime;
+    transform.position += transform.forward * speed * Time.deltaTime;
   }
 }
