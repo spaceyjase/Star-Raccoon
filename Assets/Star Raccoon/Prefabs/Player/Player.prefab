@@ -500,10 +500,10 @@ MonoBehaviour:
   invertY: 1
   spin: 2
   boundary:
-    xMin: -1.8
-    xMax: 1.8
-    yMin: -0.05
-    yMax: 1.9
+    xMin: -3
+    xMax: 3
+    yMin: -1
+    yMax: 3
 --- !u!114 &114581243333544978
 MonoBehaviour:
   m_ObjectHideFlags: 1

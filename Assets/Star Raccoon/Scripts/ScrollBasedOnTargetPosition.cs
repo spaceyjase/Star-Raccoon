@@ -6,6 +6,10 @@ public class ScrollBasedOnTargetPosition : MonoBehaviour
 {
   [SerializeField]
   private GameObject target;
+  [SerializeField]
+  private bool ignoreX = false;
+  [SerializeField]
+  private bool ignoreY = false;
 
   private float lastTargetXPosition;
   private float lastTargetYPosition;
@@ -25,7 +29,7 @@ public class ScrollBasedOnTargetPosition : MonoBehaviour
     {
       float offsetX = (target.transform.position.x - lastTargetXPosition) / 10;  // plane units
       float offsetY = (target.transform.position.z - lastTargetYPosition) / 10; // plane units
-      renderer.material.mainTextureOffset -= new Vector2(offsetX, offsetY);
+      renderer.material.mainTextureOffset -= new Vector2(ignoreX ? 0.0f : offsetX, ignoreY ? 0.0f : offsetY);
       lastTargetXPosition = target.transform.position.x;
       lastTargetYPosition = target.transform.position.z;
     }
