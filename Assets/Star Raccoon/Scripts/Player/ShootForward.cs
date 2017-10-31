@@ -16,7 +16,7 @@ public class ShootForward : MonoBehaviour
 
   private float lastAttackTime = 0.0f;
 
-  private void Update()
+  private void FixedUpdate()
   {
     if (Input.GetButtonDown("Fire1") && Time.time - lastAttackTime > attackDelay)
     {

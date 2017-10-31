@@ -794,7 +794,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 54554262539727162, guid: be7fd5e944e96824883e012047dcc029,
     type: 2}
   velocity: 40
-  attackDelay: 0.25
+  attackDelay: 0.1
   laserOrigin: {fileID: 4578018887242952}
 --- !u!114 &114752860081085168
 MonoBehaviour:
