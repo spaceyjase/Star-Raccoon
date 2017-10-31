@@ -533,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doubleTapDelay: 0.25
+  barrelRollDelay: 1
 --- !u!212 &212191162586669558
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -10,8 +10,6 @@ public class Roll : MonoBehaviour
   [SerializeField]
   private float barrelRollDelay = 0.5f;
 
-  private float doubleTapTime = 0.0f;
-
   public bool AllowedToBarrelRoll { get; private set; } = true;
   public bool DoubleTap { get; private set; }
 
@@ -27,14 +25,13 @@ public class Roll : MonoBehaviour
     {
       if (DoubleTap)
       {
-        DoBarrelRoll();
+        StartCoroutine(nameof(DoBarrelRoll), Input.GetAxisRaw("Roll") > 0);
       }
       else
       {
         StartCoroutine(nameof(BarrelRollExpiry));
       }
     }
-    doubleTapTime = Time.time;
   }
 
   private IEnumerator BarrelRollExpiry()
@@ -48,16 +45,32 @@ public class Roll : MonoBehaviour
   private void RollOnInput()
   {
     float h = Input.GetAxis("Roll");
-    var rotation = transform.rotation.eulerAngles;
+    Vector3 rotation = transform.rotation.eulerAngles;
     rotation.z = -90 * h;
     transform.rotation = Quaternion.Euler(rotation);
   }
 
-  private void DoBarrelRoll()
+  private IEnumerator DoBarrelRoll(bool right)
   {
-    Debug.Log("Do a barrel roll!");
-    StartCoroutine(nameof(AllowedToBarrelRollExpiry));
-    DoubleTap = false;
+    float t = 0.0f;
+
+    Vector3 initialRotation = transform.rotation.eulerAngles;
+    Vector3 goalRotation = initialRotation;
+
+    goalRotation.z += (right ? -360 : 360);
+
+    Vector3 currentRotation = initialRotation;
+
+    float halfDuration = barrelRollDelay / 2.0f;
+    while (t < halfDuration)
+    {
+      currentRotation.z = Mathf.Lerp(initialRotation.z, goalRotation.z, t / halfDuration);
+      transform.rotation = Quaternion.Euler(currentRotation);
+      t += Time.deltaTime;
+      yield return null;
+    }
+
+    yield return null;
   }
 
   private IEnumerator AllowedToBarrelRollExpiry()

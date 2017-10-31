@@ -26,7 +26,7 @@ public class RandomSpawner : MonoBehaviour
     float posX = UnityEngine.Random.Range(-xRange, xRange);
     float posY = UnityEngine.Random.Range(-yRange, yRange);
     var prefab = prefabs[UnityEngine.Random.Range(0, prefabs.Length)];
-    GameObject clone = Instantiate(prefab, transform.position + new Vector3(posX, posY, 0.0f), prefab.transform.rotation);
+    Instantiate(prefab, transform.position + new Vector3(posX, posY, 0.0f), prefab.transform.rotation);
 
     // Spawn another wall!
     Invoke(nameof(SpawnWall), UnityEngine.Random.Range(minSpawnTime, maxSpawnTime));
