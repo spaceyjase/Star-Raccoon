@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultDistance: {x: 0, y: -0.5, z: 0}
-  distanceDampening: 1.2
+  distanceDampening: 0.8
   target: {fileID: 249805131}
 --- !u!4 &2129635360 stripped
 Transform:

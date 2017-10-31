@@ -45,9 +45,12 @@ public class Roll : MonoBehaviour
   private void RollOnInput()
   {
     float h = Input.GetAxis("Roll");
-    Vector3 rotation = transform.rotation.eulerAngles;
-    rotation.z = -90 * h;
-    transform.rotation = Quaternion.Euler(rotation);
+    if (h < 0 || h > 0)
+    {
+      Vector3 rotation = transform.rotation.eulerAngles;
+      rotation.z = -90 * h;
+      transform.rotation = Quaternion.Euler(rotation);
+    }
   }
 
   private IEnumerator DoBarrelRoll(bool right)
