@@ -37,6 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4893948661601350}
+  - component: {fileID: 114856501351623954}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -113,6 +114,20 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1146112120359928}
   m_Enabled: 1
+--- !u!114 &114856501351623954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273497136108462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5186c9b7178454b498601aa8fc5fbff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultDistance: {x: 0, y: -0.5, z: 0}
+  distanceDampening: 0.8
+  target: {fileID: 0}
 --- !u!124 &124632228462520750
 Behaviour:
   m_ObjectHideFlags: 1
