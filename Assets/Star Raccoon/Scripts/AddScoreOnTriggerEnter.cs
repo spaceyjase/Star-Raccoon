@@ -9,7 +9,6 @@ public class AddScoreOnTriggerEnter : MonoBehaviour
 
   private void OnTriggerEnter(Collider other)
   {
-    Debug.Log("Collision with ring center");
     ScoreManager.Instance.AddScore(value);
   }
 }
