@@ -325,7 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 1034833283092880, guid: 7a81325e7aca45845a258ffebce8705a, type: 2}
-  xRange: 3
+  xRange: 2.5
   yRange: 1.5
   minSpawnTime: 2
   maxSpawnTime: 5
@@ -613,6 +613,11 @@ Prefab:
     - target: {fileID: 1273497136108462, guid: afe8fbc9635fe5c41a76a4ca065011e7, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20353150220915706, guid: afe8fbc9635fe5c41a76a4ca065011e7,
+        type: 2}
+      propertyPath: orthographic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afe8fbc9635fe5c41a76a4ca065011e7, type: 2}
