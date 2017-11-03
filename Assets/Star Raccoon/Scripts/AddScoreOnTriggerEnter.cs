@@ -7,8 +7,14 @@ public class AddScoreOnTriggerEnter : MonoBehaviour
   [SerializeField]
   private int value = 100;
 
+  private bool scored = false;
+
   private void OnTriggerEnter(Collider other)
   {
-    ScoreManager.Instance.AddScore(value);
+    if (!scored)
+    {
+      ScoreManager.Instance.AddScore(value);
+      scored = true;
+    }
   }
 }

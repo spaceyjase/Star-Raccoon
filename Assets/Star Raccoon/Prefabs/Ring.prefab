@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 4690567468547246}
   - component: {fileID: 114946978053057386}
   - component: {fileID: 135010892003592858}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collision geometry (Center)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
