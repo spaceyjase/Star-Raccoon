@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,9 +21,20 @@ public class ShipMovement : MonoBehaviour
 
   private Rigidbody rb;
 
-  private void Awake()
+  private void Start()
   {
     rb = GetComponent<Rigidbody>();
+    Messenger<int>.AddListener("Level Changed", OnLevelChanged);
+  }
+
+  private void OnDestroy()
+  {
+    Messenger<int>.RemoveListener("Level Changed", OnLevelChanged);
+  }
+
+  private void OnLevelChanged(int level)
+  {
+    Debug.Log("New level (" + level +")!");
   }
 
   private void FixedUpdate()
