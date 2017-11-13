@@ -218,7 +218,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f4ba652474d0347498896daaf8548deb, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f4ba652474d0347498896daaf8548deb, type: 2}
       propertyPath: m_LocalRotation.x
@@ -226,7 +226,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f4ba652474d0347498896daaf8548deb, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f4ba652474d0347498896daaf8548deb, type: 2}
       propertyPath: m_LocalRotation.z
@@ -234,24 +234,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f4ba652474d0347498896daaf8548deb, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f4ba652474d0347498896daaf8548deb, type: 2}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: f4ba652474d0347498896daaf8548deb, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: f4ba652474d0347498896daaf8548deb, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: f4ba652474d0347498896daaf8548deb, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
+    - target: {fileID: 114992244488432076, guid: f4ba652474d0347498896daaf8548deb,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1356510623}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4ba652474d0347498896daaf8548deb, type: 2}
   m_IsPrefabParent: 0
@@ -729,10 +722,6 @@ Prefab:
     - target: {fileID: 4114999476364526, guid: 44b76fed29c74614f93e02d0346a14ac, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709090669051300, guid: 44b76fed29c74614f93e02d0346a14ac, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44b76fed29c74614f93e02d0346a14ac, type: 2}
