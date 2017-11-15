@@ -769,6 +769,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114400776710246296, guid: 44b76fed29c74614f93e02d0346a14ac,
+        type: 2}
+      propertyPath: boundary.yMin
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114400776710246296, guid: 44b76fed29c74614f93e02d0346a14ac,
+        type: 2}
+      propertyPath: boundary.yMax
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44b76fed29c74614f93e02d0346a14ac, type: 2}
   m_IsPrefabParent: 0

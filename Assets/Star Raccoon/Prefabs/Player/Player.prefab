@@ -786,8 +786,8 @@ MonoBehaviour:
   boundary:
     xMin: -3
     xMax: 3
-    yMin: -0.8
-    yMax: 3
+    yMin: 12.35
+    yMax: 15
 --- !u!114 &114581243333544978
 MonoBehaviour:
   m_ObjectHideFlags: 1
