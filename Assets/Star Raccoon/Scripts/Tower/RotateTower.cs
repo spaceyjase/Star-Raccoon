@@ -10,6 +10,6 @@ public class RotateTower : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    transform.RotateAround(transform.up, -Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime);
+    transform.Rotate(transform.up, -Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime);
   }
 }
