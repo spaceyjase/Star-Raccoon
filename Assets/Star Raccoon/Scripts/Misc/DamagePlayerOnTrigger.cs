@@ -8,12 +8,14 @@ public class DamagePlayerOnTrigger : MonoBehaviour
   private float damageAmount = 1.0f;
   [SerializeField]
   private float cooldownTime = 1.0f;
+  [SerializeField]
+  private string collisionTag = "Player";
 
   private bool cooldown = false;
 
   private void OnTriggerEnter(Collider other)
   {
-    if (!cooldown)
+    if (!cooldown && other.tag == collisionTag)
     {
       cooldown = true;
       HealthManager.Instance.TakeDamage(damageAmount);
