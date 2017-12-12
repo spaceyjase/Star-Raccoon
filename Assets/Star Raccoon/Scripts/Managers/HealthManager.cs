@@ -47,7 +47,7 @@ public class HealthManager : MonoBehaviour
 
   private void UpdateUI()
   {
-    healthDisplay.localScale = new Vector3(healthDisplay.localScale.x, originalScale * currentHealth / maxHealth, healthDisplay.localScale.z);
+    healthDisplay.localScale = new Vector3(healthDisplay.localScale.x, originalScale * (currentHealth / maxHealth), healthDisplay.localScale.z);
   }
 
   // Use this for initialization
